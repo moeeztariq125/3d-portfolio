@@ -1,7 +1,6 @@
 .navbar {
-    background: rgba(0,0,0,0.3);
+    background: rgba(133, 192, 173, 0.3);
     width: max-content;
-    display: block;
     padding: 0.1rem 0.1rem;
     z-index: 2;
     position: fixed;
@@ -22,21 +21,22 @@
         transition:var(--transition);
 
         &:hover {
-            background: rgba(0,0,0,0.3);
+            background: rgba(133, 192, 173, 0.3);
         }
-        // &.active {
-        //     background: rgba(0,0,0,0.3);
-        // }
+        &.active {
+            color: rgba(150, 174, 167, 0.904);
+        }
     }
 
 }
 
 .icon__cover {
-        position: absolute;
-        background: rgba(0,0,0,0.3);
+        position: fixed;
+        background: rgba(133, 192, 173, 0.3);
         padding: 0.7rem;
         border-radius: 2rem;
         display:flex;
         transition:var(--transition);
         z-index: 3;
+        
 }

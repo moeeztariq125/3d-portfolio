@@ -1,0 +1,24 @@
+@keyframes wave {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-100px); /* Adjust the vertical translation as needed */
+    }
+    100% {
+      transform: translateY(0); /* Back to the initial position */
+    }
+  }
+  
+  .app__header {
+    height: 100vh;
+    width: auto;
+    background: rgb(0, 0, 0);
+     .header-circle{
+        z-index: 2;
+        background: radial-gradient(circle at 50% 200%, rgb(22, 141, 143) 0%, rgb(0, 0, 0) 70%);
+        animation: wave 2s infinite linear; /* Adjust the animation duration as needed */
+        transform: translateY(0); /* Initial position */
+     }
+  }
+  
