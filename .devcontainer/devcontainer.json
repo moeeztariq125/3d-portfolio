@@ -1,0 +1,9 @@
+{
+	"name": "Node.js",
+	"dockerFile":"../Dockerfile",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	  },
+  	"forwardPorts": [4200]
+
+}
