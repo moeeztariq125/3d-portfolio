@@ -37,7 +37,6 @@ const Navbar = () => {
   
   return (
     <>
-    <div className="icon__cover" style={coverStyle}/>
     <nav className='navbar' >
     {icons.map((icon) => (
       <Icon key={icon}
@@ -51,6 +50,8 @@ const Navbar = () => {
       
       ))}
     </nav>
+    <div className="icon__cover" style={coverStyle}/>
+
       </>
   )
 }
