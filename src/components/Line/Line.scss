@@ -1,15 +1,16 @@
 .Line {
     height: 100%;
-    width: 0px;
     max-height: 100%;
     background: transparent;
     position:absolute; /* Change to 'fixed' to make it static in the background */
-    left: 20%;
+    left: 10%;
+    overflow-y: hidden;
+    padding: 0% 0.4rem;
 }
 
 .header_circle {
-    width: 7px;
-    height: 7px;
+    width: 11px;
+    height: 11px;
     background: transparent;
     border: 2px solid rgb(22, 141, 143);
     border-radius: 50%;
@@ -20,17 +21,17 @@
     width: 1px; /* Width of the line */
     height: 100%; /* Height of the line */
     background: rgb(22, 141, 143);
-    overflow-y: hidden; /* Hide overflow in the Y direction */
 }
 
 .header_line_start {
     width: 1px; /* Width of the line */
-    height: 15%; /* Height of the line */
+    height: 30%; /* Height of the line */
     background: rgb(22, 141, 143);
 }
 
 .header_line_start_empty {
     width: 1px; /* Width of the line */
-    height: 15%; /* Height of the line */
-    background: rgb(22, 141, 143);
+    height: 30%; /* Height of the line */
+    background: transparent;
+    
 }
