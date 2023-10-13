@@ -1,9 +1,9 @@
 const app_header_skills = [
-    'things',
-    'webapps',
+    'things  ',
+    'webapps ',
     'websites',
-    'games',
-    'ux/ui'
+    'games   ',
+    'ux/ui   '
 ]
 
 export default app_header_skills
