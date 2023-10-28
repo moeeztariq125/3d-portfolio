@@ -2,7 +2,7 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='CONTACT'>Footer</div>
   )
 }
 

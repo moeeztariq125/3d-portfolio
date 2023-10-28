@@ -1,0 +1,17 @@
+.app__about{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+.app__about__content{
+    position: absolute;
+    margin-left: 18%;
+    margin-top: 260px;
+    h2{
+        color: #988e9f;
+        font-size: 18px;
+        font-weight: 300;
+      }
+}

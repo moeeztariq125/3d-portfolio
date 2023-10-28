@@ -6,11 +6,11 @@ const App = () => {
     <div className="app">
       <Navbar/>
       <Header/>
-      <Footer/>
       <About/>
       <Skills/>
-      <Testimonials/>
       <Work/>
+      <Testimonials/>
+      <Footer/>
     </div>
   )
 }

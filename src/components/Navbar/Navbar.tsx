@@ -2,8 +2,8 @@ import './Navbar.scss'
 import Icon from './Icon'
 import { useState, useRef, useEffect } from 'react'
 const Navbar = () => {
-  let icons = ['icon1','icon2','icon3','icon4']
-  const [isActive, setIsActive] = useState('icon1')
+  let icons = ['home','about','work','contact']
+  const [isActive, setIsActive] = useState('home')
   const [coverStyle, setCoverStyles] = useState({})
   const activeIconRef = useRef(null)
 
@@ -21,11 +21,18 @@ const Navbar = () => {
       });
     }
   };
+  const scrollToSection = () => {
+    if(activeIconRef.current){
+      const sectionName = activeIconRef.current.innerText;
+      const section = document.getElementsByClassName(sectionName);
+      section[0].scrollIntoView({behavior: 'smooth'})
+    }
+  }
 
   useEffect(() => {
     // Initial position calculation
     updateCoverPosition();
-
+    scrollToSection()
     // Add a resize event listener to update position when the window size changes
     window.addEventListener('resize', updateCoverPosition);
 

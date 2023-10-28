@@ -1,8 +1,8 @@
 import './Line.scss'
-const Line:React.FC<LineProps> = (start) => {
+const Line:React.FC<LineProps> = (props) => {
   return (
     <div className='Line'>
-        {start?<div className='header_line_start_empty'/>:<div className='header_line_start'/>}
+        {props.start?<div className='header_line_start_empty'/>:<div className='header_line_start'/>}
         <div className='header_circle'/>
         <div className='header_line'/>
     </div>

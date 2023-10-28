@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import { Line } from '../../components'
 import './Header.scss'
 import {app_header_skills} from '../../constants'
-import {GoogleOauth} from '../../components'
+import {AiOutlineArrowDown} from 'react-icons/ai'
 const Header = () => {
   const [word, setWord] = useState(app_header_skills[0])
   const [intervalTime, setIntervalTime] = useState(1000)
@@ -11,7 +11,6 @@ const Header = () => {
   const [split, setSplit] = useState(0)
   useEffect(()=>{
     let interval = setInterval(randomStringGenerator,intervalTime)
-    console.log('counter',counter)
     function randomStringGenerator(){
       clearInterval(interval)
       if(counter==15){
@@ -65,14 +64,17 @@ const Header = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   return (
-    <div className='app__header'>
+    <div className='app__header HOME'>
       <Line start={true}/>
       <div className='circle'/>
       <div className='app__header__content'>
       <h2>&lt;Start /&gt;</h2>
       <h1>Hi, I'm <span className='title'>Moeez Tariq</span></h1>
       <h1 className='before_skills'>I <span className='italic'>design</span> and <span className='bold'>develop</span> {word} </h1>
-      <GoogleOauth/>
+      <div className='subtitle'>
+      <h2>Let Me Show You...</h2>
+      <AiOutlineArrowDown className='arrow'/>
+      </div>
       </div>
     </div>
   )

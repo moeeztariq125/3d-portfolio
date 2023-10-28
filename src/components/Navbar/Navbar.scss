@@ -19,7 +19,7 @@
         border-radius: 2rem;
         display:flex;
         transition:var(--transition);
-
+        cursor: pointer;
         &:hover {
             background: rgba(133, 192, 173, 0.3);
         }
@@ -38,5 +38,5 @@
         display:flex;
         transition:var(--transition);
         z-index: 3;
-        
+        cursor: pointer;
 }

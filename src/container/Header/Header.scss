@@ -18,7 +18,7 @@
 
   .app__header__content{
     position: absolute;
-    top: 26%;
+    top: 27%;
     left: 18%;
     height: auto;
     width: 60%;
@@ -54,4 +54,18 @@
   }
 }
 
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  .arrow {
+    color: #988e9f;
+    margin-left: 10px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      font-size: 50px;
+    }
+  }
+}
 
