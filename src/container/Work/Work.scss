@@ -1,0 +1,21 @@
+.app__work{
+    display: flex;
+    flex-direction: row;
+    // background-color: black;
+    height: 100vh;
+}
+
+.app__work__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15rem;
+    flex-grow:1;
+    h2{
+        margin-left: 18%;
+        color: #988e9f;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+    
