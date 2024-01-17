@@ -3,7 +3,7 @@
     max-height: 100%;
     max-width: 2px;
     background: transparent;
-    position:relative; /* Change to 'fixed' to make it static in the background */
+    position:absolute; /* Change to 'fixed' to make it static in the background */
     left: 10%;
     overflow-y: hidden;
     padding: 0% 0.4rem;
@@ -20,19 +20,21 @@
 
 .header_line {
     width: 1px; /* Width of the line */
-    height: 100%; /* Height of the line */
+    height: 89%; /* Height of the line */
     background: rgb(22, 141, 143);
+    overflow: hidden;
 }
 
 .header_line_start {
     width: 1px; /* Width of the line */
-    height: 30%; /* Height of the line */
+    height: 31vh; /* Height of the line */
     background: rgb(22, 141, 143);
+    overflow: hidden;
 }
 
 .header_line_start_empty {
     width: 1px; /* Width of the line */
-    height: 30%; /* Height of the line */
+    height: 31vh; /* Height of the line */
     background: transparent;
-    
+    overflow: hidden;
 }

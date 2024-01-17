@@ -6,14 +6,8 @@ const App = () => {
     <div className="app">
       <Navbar/>
       <Header/>
-      <div className='work_section'>
-      <Work/>
-      <Stars/>
-      </div>
       <About/>
-      <Skills/>
-      <Testimonials/>
-      <Footer/>
+      {/* <Work/> */}
     </div>
   )
 }

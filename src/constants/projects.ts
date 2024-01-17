@@ -1,0 +1,31 @@
+export default [
+    [
+        {
+            image:'/images/mycash.png',
+            title:'MyCash',
+            id:'0',
+        },
+        {
+            image:'/images/mycash.png',
+            title:'MyCash',
+            id:'1',
+        }
+    ],
+    [
+        {
+            image:'/images/mycash.png',
+            title:'MyCash',
+            id:'2',
+        },
+        {
+            image:'/images/mycash.png',
+            title:'MyCash',
+            id:'3',
+        },
+        {
+            image:'/images/mycash.png',
+            title:'MyCash',
+            id:'4',
+        }
+    ]
+]

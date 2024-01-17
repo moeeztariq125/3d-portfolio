@@ -1,17 +1,49 @@
 .app__about{
-    height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color:  rgb(1, 16, 16);
+    overflow: visible;
+    position: relative;
 }
 
 .app__about__content{
-    position: absolute;
     margin-left: 18%;
-    margin-top: 260px;
+    margin-top: 220px;
+    color:white;
+    position: relative;
     h2{
         color: #988e9f;
         font-size: 18px;
         font-weight: 300;
       }
+}
+
+.green {
+    color:rgb(22, 141, 143)
+}
+.lightGreen {
+    color: #24e394
+}
+.comment {
+    color:#78707e
+}
+.yellow {
+    color: #eeff31
+}
+.red {
+    color:#e3244c
+}
+.desc {
+    color: #24e33a
+}
+.dots {
+    color: #3b3553;
+    display:inline;
+    font-size: bolder;
+}
+
+@media screen and (max-width: 600px) {
+    .dots{
+        visibility: hidden;
+    }
 }
