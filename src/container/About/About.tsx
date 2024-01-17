@@ -4,8 +4,9 @@ import './About.scss'
 const About = () => {
   return (
     <div className='app__about ABOUT'>
-      <Line start={false}/>
       <Stars/>
+      <div className='app__about__inner'>
+      <Line start={false}/>
       <div className='app__about__content'>
         <h2>&lt;About /&gt;</h2> 
         <p><span className='green'>class</span> <span className='yellow'>Moeez Tariq</span> {`{`}</p>
@@ -54,6 +55,7 @@ const About = () => {
         <p><span className='dots'>····</span>{`]`}</p>
         <p><span className='dots'>··</span>{'}'}</p>
         <p>{'}'}</p>
+      </div>
       </div>
     </div>
   )

@@ -3,6 +3,11 @@
   background: black;
   position: relative; /* Added to establish a stacking context */
   z-index: 1;
+  display: flex;
+  flex-direction: row ;
+  gap: 30px;
+  padding-left: 10vw;
+
 
   .circle {
     z-index: -1; /* Set to a negative value to position it behind other elements */
@@ -17,11 +22,9 @@
   }
 
   .app__header__content{
-    position: absolute;
-    top: 27%;
-    left: 18%;
     height: auto;
     width: 60%;
+    margin-top: 28vh;
     h2{
       color: #988e9f;
       font-size: 18px;

@@ -4,13 +4,19 @@
     background-color:  rgb(1, 16, 16);
     overflow: visible;
     position: relative;
+
+}
+.app__about__inner{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 10vw;
 }
 
 .app__about__content{
-    margin-left: 18%;
-    margin-top: 220px;
     color:white;
     position: relative;
+    margin-top: 30vh;
     h2{
         color: #988e9f;
         font-size: 18px;
@@ -39,7 +45,9 @@
 .dots {
     color: #3b3553;
     display:inline;
-    font-size: bolder;
+    font-weight: bolder;
+    font-size: 15px;
+    letter-spacing: 5px;
 }
 
 @media screen and (max-width: 600px) {
