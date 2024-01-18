@@ -9,6 +9,7 @@
   padding-left: 10vw;
 
 
+
   .circle {
     z-index: -1; /* Set to a negative value to position it behind other elements */
     position: absolute; /* Change to 'fixed' to make it static in the background */
@@ -49,12 +50,38 @@
       }
 
     }
+
+    img {
+      margin-top: 28vh;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      background-color: rgba(22, 141, 143,.1);
+      border-radius: 50%;
+      animation: image .5s 1 ease-in-out;
+      transition: all .5s ease-in-out;
+      &:hover{
+        background-color: rgba(22, 141, 143,.15);
+        // width: 450px;
+        // height: 450px;
+      }
+    }
 }
 
 @keyframes colorChange {
   to {
     background-size: 100% 120%;
   }
+}
+
+@keyframes image {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
 }
 
 

@@ -1,14 +1,33 @@
 .card {
     position: relative;
-    width: 300px; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     overflow: visible;
     border-radius: 8px; /* Add rounded corners if desired */
     color: white;
+    background-color: rgba(22, 141, 143,.1);
+    width: 0%;
     .overlay{
         position:absolute;
-        margin-top: 100px;
+        top: 100px;
+        left: -60px;
     }
     img{
-        margin-left: 60px;
+        // margin-left: 60px;
+    }
+}
+
+.open{
+    animation: onOpen 1.5s ease-in-out none 1 normal;
+    animation-fill-mode:forwards
+}
+
+@keyframes onOpen {
+    0%{
+        height: 100%;
+        width: 0%;
+    }
+    100%{
+        height: 100%;
+        width: 100%;
     }
 }

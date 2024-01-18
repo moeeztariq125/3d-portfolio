@@ -3,6 +3,20 @@ import { Line } from '../../components'
 import './Header.scss'
 import {app_header_skills} from '../../constants'
 import {AiOutlineArrowDown} from 'react-icons/ai'
+import { Tilt } from 'react-tilt'
+
+const defaultOptions = {
+	reverse:        false,  // reverse the tilt direction
+	max:            35,     // max tilt rotation (degrees)
+	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+	scale:          1,    // 2 = 200%, 1.5 = 150%, etc..
+	speed:          1000,   // Speed of the enter/exit transition
+	transition:     true,   // Set a transition on enter/exit.
+	axis:           null,   // What axis should be disabled. Can be X or Y.
+	reset:          true,    // If the tilt effect has to be reset on exit.
+	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
+
 const Header = () => {
   const [word, setWord] = useState(app_header_skills[0])
   const [intervalTime, setIntervalTime] = useState(1000)
@@ -68,13 +82,18 @@ const Header = () => {
       <Line start={true}/>
       <div className='circle'/>
       <div className='app__header__content'>
-      <h2>&lt;Start /&gt;</h2>
-      <h1>Hi, I'm <span className='title'>Moeez Tariq</span></h1>
-      <h1 className='before_skills'>I <span className='italic'>design</span> and <span className='bold'>develop</span> {word} </h1>
-      <div className='subtitle'>
-      <h2>Let Me Show You...</h2>
-      <AiOutlineArrowDown className='arrow'/>
+        <h2>&lt;Start /&gt;</h2>
+        <h1>Hi, I'm <span className='title'>Moeez Tariq</span></h1>
+        <h1 className='before_skills'>I <span className='italic'>design</span> and <span className='bold'>develop</span> {word} </h1>
+        <div className='subtitle'>
+          <h2>Let Me Show You...</h2>
+          <AiOutlineArrowDown className='arrow'/>
+        </div>
       </div>
+      <div className='image-cover'>
+      <Tilt options={defaultOptions}>
+      <img src='/images/avatar-bg-removed.png'/>
+      </Tilt>
       </div>
     </div>
   )

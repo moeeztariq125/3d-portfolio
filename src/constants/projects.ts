@@ -1,5 +1,4 @@
 export default [
-    [
         {
             image:'/images/mycash.png',
             title:'MyCash',
@@ -9,9 +8,7 @@ export default [
             image:'/images/mycash.png',
             title:'MyCash',
             id:'1',
-        }
-    ],
-    [
+        },
         {
             image:'/images/mycash.png',
             title:'MyCash',
@@ -27,5 +24,4 @@ export default [
             title:'MyCash',
             id:'4',
         }
-    ]
 ]
