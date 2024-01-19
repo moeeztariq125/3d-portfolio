@@ -34,15 +34,25 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
 
   return (
     <div className={classes} ref={cardRef}>
-      <div className="overlay">
-        <h2>Your Title</h2>
-        <p>Your description goes here.</p>
+      <img src={props.image} alt="Card Image"  />
+      <div className='description'>
+        <div className='top'>
+          <p>{props.from} - {props.to}</p>
+          <p>{props.country}</p>
+        </div>
+        <p>{props.description}</p>
       </div>
-      <img src="/images/mycash.png" alt="Card Image" />
     </div>
   );
 };
 
-interface ProjectCardProps {}
+interface ProjectCardProps {
+  from:string;
+  to:string;
+  country:string;
+  description:string;
+  image:string;
+  id:string;
+}
 
 export default ProjectCard;

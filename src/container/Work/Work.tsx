@@ -19,7 +19,7 @@ const Work = () => {
         <h2>&lt;Projects /&gt;</h2>
         <div className='projects-list'>
         {projectsList.map((project,key)=>{
-          return <ProjectCard/>
+          return <ProjectCard {...project} key={key}/>
         })} 
           </div>
         </div>
