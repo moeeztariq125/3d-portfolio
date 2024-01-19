@@ -1,5 +1,5 @@
-import {Header, Footer, About, Skills, Testimonials, Work, Contact} from './container'
-import {Navbar, Stars} from './components'
+import {Header, About, Work, Contact} from './container'
+import {Navbar} from './components'
 import './App.scss'
 const App = () => {
   return (

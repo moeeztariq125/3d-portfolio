@@ -27,7 +27,7 @@ const Navbar = () => {
       return
     }
     if(activeIconRef.current){
-      const sectionName = activeIconRef.current.innerText;
+      const sectionName = (activeIconRef.current as HTMLElement).innerText;
       const section = document.getElementsByClassName(sectionName);
       section[0].scrollIntoView({behavior: 'smooth'})
     }

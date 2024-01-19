@@ -4,9 +4,6 @@ import { projectsList } from '../../constants'
 
 
 const Work = () => {
-  const randomNumberGenerator=()=>{
-    return Math.random()*100
-  }
 
 
   return (
