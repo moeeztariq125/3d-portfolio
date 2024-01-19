@@ -1,0 +1,38 @@
+.Line {
+    height: 100%;
+    max-height: 100%;
+    max-width: 2px;
+    background: transparent;
+    overflow-y: hidden;
+    padding: 0% 0.4rem;
+}
+
+.header_circle {
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border: 2px solid rgb(22, 141, 143);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.header_line {
+    width: 1px; /* Width of the line */
+    height: 89%; /* Height of the line */
+    background: rgb(22, 141, 143);
+    overflow: hidden;
+}
+
+.header_line_start {
+    width: 1px; /* Width of the line */
+    height: 31vh; /* Height of the line */
+    background: rgb(22, 141, 143);
+    overflow: hidden;
+}
+
+.header_line_start_empty {
+    width: 1px; /* Width of the line */
+    height: 31vh; /* Height of the line */
+    background: transparent;
+    overflow: hidden;
+}

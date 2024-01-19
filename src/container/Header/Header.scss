@@ -1,0 +1,101 @@
+.app__header {
+  height: 100vh;
+  background: black;
+  position: relative; /* Added to establish a stacking context */
+  z-index: 1;
+  display: flex;
+  flex-direction: row ;
+  gap: 30px;
+  padding-left: 10vw;
+
+
+
+  .circle {
+    z-index: -1; /* Set to a negative value to position it behind other elements */
+    position: absolute; /* Change to 'fixed' to make it static in the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 200%, rgb(22, 141, 143) 0%, rgb(0, 0, 0) 70%);
+    background-size: 100% 100%;
+    animation: colorChange 1.5s infinite alternate;
+  }
+
+  .app__header__content{
+    height: auto;
+    width: 60%;
+    margin-top: 28vh;
+    h2{
+      color: #988e9f;
+      font-size: 18px;
+      font-weight: 300;
+      margin: 1rem 0rem;
+    }
+    h1{
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      span.title{
+        color: rgb(22, 141, 143);
+      }
+      span.italic{
+          font-style: italic;
+          font-weight: 300;
+        }
+      span.bold{
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+
+    }
+
+    img {
+      margin-top: 28vh;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      background-color: rgba(22, 141, 143,.1);
+      border-radius: 50%;
+      animation: image .5s 1 ease-in-out;
+      transition: all .5s ease-in-out;
+      &:hover{
+        background-color: rgba(22, 141, 143,.15);
+        // width: 450px;
+        // height: 450px;
+      }
+    }
+}
+
+@keyframes colorChange {
+  to {
+    background-size: 100% 120%;
+  }
+}
+
+@keyframes image {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  .arrow {
+    color: #988e9f;
+    margin-left: 10px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      font-size: 50px;
+    }
+  }
+}
+

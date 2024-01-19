@@ -1,0 +1,37 @@
+.app__work{
+    display: flex;
+    flex-direction: row;
+    background-color:  rgb(1, 16, 16);
+    overflow: visible;
+    position: relative;
+
+}
+.app__work__inner{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 10vw;
+    flex-grow:1;
+}
+
+
+.app__work__content{
+    width: 60%;
+    margin-top: 28vh;
+    margin-right: 5%;
+    flex-grow:1;
+    h2{
+        color: #988e9f;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 1rem 0rem;
+      }
+
+    .projects-list{
+        margin-left: 5vw;
+        margin-top: 9vh;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

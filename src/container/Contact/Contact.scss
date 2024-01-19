@@ -1,0 +1,70 @@
+.app__contact{
+    display: flex;
+    flex-direction: row;
+    background-color:  rgb(1, 16, 16);
+    overflow: visible;
+    position: relative;
+
+}
+.app__contact__inner{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 10vw;
+}
+
+.app__contact__content{
+    color:white;
+    position: relative;
+    margin-top: 28vh;
+    display: flex;
+    flex-direction: column;
+    h2{
+        color: #988e9f;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 1rem 0rem;
+      }
+    h1{
+        font-size: 21px;
+        font-weight: 100;
+    }
+    button{
+        cursor: pointer;
+        padding:15px 30px;
+        text-align: center;
+        border-radius:50px;
+        color: white;
+        margin-top: 50px;
+        font-size: 21px;
+        background-color: rgb(22, 141, 143);
+        outline: none;
+        transition: all .4s ease-in-out;
+        &:hover{
+            scale: 1.05;
+            background-color: rgb(30, 180, 183);
+            
+        }
+    }
+    small{
+        margin-top: 100px;
+    }
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40vw;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    a{
+        color:rgb(22, 141, 143);
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            color:rgb(25, 171, 173);
+
+        }
+    }
+}
