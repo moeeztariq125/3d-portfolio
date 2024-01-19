@@ -20,16 +20,18 @@ const Navbar = () => {
         height: `${(icon.height / rootFontSize)}rem`,
       });
   };
-  const scrollToSection = () => {
+  const scrollToSection = (icon?:string) => {
+    if(icon){
+      const section = document.getElementsByClassName(icon)
+      section[0].scrollIntoView({behavior: 'smooth'})
+      return
+    }
     if(activeIconRef.current){
       const sectionName = activeIconRef.current.innerText;
       const section = document.getElementsByClassName(sectionName);
       section[0].scrollIntoView({behavior: 'smooth'})
     }
   }
-  useEffect(() => {
-    scrollToSection()
-  }, [isActive]);
 
 
   useEffect(()=>{
@@ -70,7 +72,9 @@ const Navbar = () => {
       <Icon key={icon}
       isActive={isActive === icon} 
       Name={icon} 
-      onClick = {()=>{setIsActive(icon)}} 
+      onClick = {()=>{
+        setIsActive(icon);
+        scrollToSection(icon);}} 
       ref={(ref:any) => {
         if(isActive === icon){activeIconRef.current = ref}
       }}

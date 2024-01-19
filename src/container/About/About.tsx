@@ -20,7 +20,7 @@ const About = () => {
         {/* Work Experience */}
         <p><span className='dots'>··</span><span className='yellow'>workExperience()</span>{' { '} </p>
         <p><span className='dots'>····</span><span className='green'>return</span> {`[`}</p>
-        <p><span className='dots'>······</span>{'{ '}<span className='desc'>'2024-Now'</span> : <span className='desc'>'NodeJS developer at BlockBunny.'</span>{' }'}</p>
+        {/* <p><span className='dots'>······</span>{'{ '}<span className='desc'>'2024-Now'</span> : <span className='desc'>'NodeJS developer at BlockBunny.'</span>{' }'}</p> */}
         <p><span className='dots'>······</span>{'{ '}<span className='desc'>'2021-Now'</span> : <span className='desc'>'Senior Full-Stack Engineer at SystemsLtd.'</span>{' }'}</p>
         <p><span className='dots'>······</span>{'{ '}<span className='desc'>'2020-2021'</span> : <span className='desc'>'IOT/ML Intern at RiseTech Pvt Ltd.'</span>{' }'}</p>
         <p><span className='dots'>······</span>{'{ '}<span className='desc'>'2020-Now'</span> : <span className='desc'>'Full-Stack Designer/developer at MTsHomeLab.'</span>{' }'}</p>
