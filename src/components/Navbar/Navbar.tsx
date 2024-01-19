@@ -2,14 +2,14 @@ import './Navbar.scss'
 import Icon from './Icon'
 import { useState, useRef, useEffect } from 'react'
 const Navbar = () => {
-  let icons = ['home','about','work','contact']
-  const [isActive, setIsActive] = useState('home')
+  let icons = ['HOME','ABOUT','WORK','CONTACT']
+  const [isActive, setIsActive] = useState('HOME')
   const [coverStyle, setCoverStyles] = useState({})
+  const [toCover, setToCover] = useState('HOME')
   const activeIconRef = useRef(null)
 
   const updateCoverPosition = () => {
-    if (activeIconRef.current) {
-      const icon = activeIconRef.current.getBoundingClientRect();
+      const icon = document.getElementById(toCover.toUpperCase())!.getBoundingClientRect();
       const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize); // Get the root font size in pixels
 
       // Calculate values in rem units
@@ -19,7 +19,6 @@ const Navbar = () => {
         width: `${(icon.width / rootFontSize)}rem`,
         height: `${(icon.height / rootFontSize)}rem`,
       });
-    }
   };
   const scrollToSection = () => {
     if(activeIconRef.current){
@@ -28,19 +27,41 @@ const Navbar = () => {
       section[0].scrollIntoView({behavior: 'smooth'})
     }
   }
-
   useEffect(() => {
-    // Initial position calculation
-    updateCoverPosition();
     scrollToSection()
-    // Add a resize event listener to update position when the window size changes
-    window.addEventListener('resize', updateCoverPosition);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', updateCoverPosition);
-    };
   }, [isActive]);
+
+
+  useEffect(()=>{
+    updateCoverPosition();
+  },[toCover])
+
+
+  useEffect(()=>{
+    window.addEventListener('resize', updateCoverPosition);
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setToCover(entry.target.className.split(' ')[1]);
+        }
+      });
+    }, options);
+    icons.forEach((icon) => {
+    const section = document.getElementsByClassName(icon.toUpperCase());
+    if (section.length > 0) {
+      observer.observe(section[0]);
+    }
+  });
+  return () => {
+    window.removeEventListener('resize', updateCoverPosition);
+    observer.disconnect();
+  };
+  },[])
   
   return (
     <>

@@ -3,7 +3,7 @@ import {forwardRef} from 'react'
 const Icon:React.FC<IconProps> = forwardRef(({isActive, Name, onClick},ref) => {
     
   return (
-    <div className={`icon ${isActive? 'active':'inactive'}`} onClick={onClick} ref={ref}>
+    <div id={Name} className={`icon ${isActive? 'active':'inactive'}`} onClick={onClick} ref={ref}>
         {Name}
     </div>
   )
@@ -11,7 +11,7 @@ const Icon:React.FC<IconProps> = forwardRef(({isActive, Name, onClick},ref) => {
 
 interface IconProps {
 isActive: boolean;
-Name : String;
+Name : string;
 onClick : ()=>void;
 }
 

@@ -41,7 +41,9 @@
         outline: none;
         transition: all .4s ease-in-out;
         &:hover{
-            scale: 1.1;
+            scale: 1.05;
+            background-color: rgb(30, 180, 183);
+            
         }
     }
     small{
@@ -59,6 +61,10 @@
     a{
         color:rgb(22, 141, 143);
         text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            color:rgb(25, 171, 173);
 
+        }
     }
 }
